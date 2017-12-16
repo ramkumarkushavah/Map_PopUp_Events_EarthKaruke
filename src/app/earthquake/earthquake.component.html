@@ -1,0 +1,56 @@
+<div class="row-fluid">
+  <div class="span12">
+    <div id="map" class="map"></div>
+  </div>
+</div>
+<form class="form">
+  <label>Page size </label>
+  <select id="format">
+    <option value="a0">A0 (slow)</option>
+    <option value="a1">A1</option>
+    <option value="a2">A2</option>
+    <option value="a3">A3</option>
+    <option value="a4" selected>A4</option>
+    <option value="a5">A5 (fast)</option>
+  </select>
+  <label>Resolution </label>
+  <select id="resolution">
+    <option value="72">72 dpi (fast)</option>
+    <option value="150">150 dpi</option>
+    <option value="300">300 dpi (slow)</option>
+  </select>
+</form>
+<button id="export-pdf">Export PDF</button>
+
+
+
+<div class="ui modal">
+  <i class="close icon"></i>
+    <div class="header">
+      Profile Picture
+      <!-- <i class="close icon"></i> -->
+      <!-- <img src="../../assets/if_fileclose_1959.png" class="close icon"> -->
+    </div>
+
+    <div class="image content">
+      <div class="ui medium image">
+        <img src="../../assets/welcome.jpg">
+      </div>
+      <div class="description">
+        <div class="ui header">Hi..</div>
+        <p class="custom letters"></p>
+        <div class="chartArea"></div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui black deny button">
+        Nope Not this
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yep, that's the Coutry
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
+<a class="btn btn-clear" title="Download JSON" [href]="downloadJsonHref" download="download.json" (click)="onDownload()">download json file</a>
